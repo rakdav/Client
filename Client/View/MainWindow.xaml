@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Client"
+        Background="Azure"
         mc:Ignorable="d"
         Title="Магазин" Height="600" Width="1000">
     <Grid>
@@ -20,7 +21,10 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button Grid.Column="0" Grid.Row="0" Content="Клиенты" Margin="20 30"/>
+                <Button Grid.Column="0" Grid.Row="0" Content="Клиенты" Margin="20 30" Style="{StaticResource MaterialDesignRaisedLightButton}" Click="Button_Click"/>
+                <Button Grid.Column="0" Grid.Row="1" Content="Товары" Margin="20 30" Style="{StaticResource MaterialDesignRaisedLightButton}" Click="Button_Click_1"/>
+                <Button Grid.Column="0" Grid.Row="2" Content="Услуги" Margin="20 30" Style="{StaticResource MaterialDesignRaisedLightButton}" Click="Button_Click_2"/>
+                <Button Grid.Column="0" Grid.Row="3" Content="Выход" Margin="20 30" Style="{StaticResource MaterialDesignRaisedLightButton}" Click="Button_Click_3"/>
             </Grid>
             <Frame Grid.Column="1" x:Name="MainFrame"/>
         </Grid>

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Client.View;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,27 @@ namespace Client
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new PageClient());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new PageClient());
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new PageTovar());
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new PageSdelka());
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

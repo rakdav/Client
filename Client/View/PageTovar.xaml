@@ -9,6 +9,6 @@
       Title="PageTovar">
 
     <Grid>
-        
+        <TextBlock>Tovar</TextBlock>
     </Grid>
 </Page>
