@@ -19,7 +19,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Button Style="{StaticResource MaterialDesignFloatingActionButton}" ToolTip="Добавить" 
-                    Width="50" Height="50" Grid.Row="0">
+                    Width="50" Height="50" Grid.Row="0" Command="{Binding AddCommand}">
                 <materialDesign:PackIcon
                     Kind="Add"
                     Height="30"
