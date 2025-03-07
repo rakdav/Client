@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Client.View
+namespace ClientProject.View
 {
     /// <summary>
     /// Логика взаимодействия для PageTovar.xaml
