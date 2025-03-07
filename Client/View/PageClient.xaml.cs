@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,9 +22,11 @@ namespace ClientProject.View
     /// </summary>
     public partial class PageClient : Page
     {
+        private HttpClient httpClient;
         public PageClient()
         {
             InitializeComponent();
+            httpClient = new HttpClient();
             DataContext = new ClientViewModel();
         }
     }

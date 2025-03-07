@@ -33,18 +33,23 @@
                     Width="30" />
             </Button>
         </Grid>
-        <ListBox Grid.Column="0">
+        <ListBox Grid.Column="0" ItemsSource="{Binding Clients}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <materialDesign:Card
-                   Background="{DynamicResource PrimaryHueDarkBrush}"
-                   Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-                   Padding="8"
-                   Width="900"
-                   Margin="10 10"
-                   UniformCornerRadius="6">
+                       Background="{DynamicResource PrimaryHueDarkBrush}"
+                       Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                       Padding="8"
+                       Width="900"
+                       Margin="10 10"
+                       UniformCornerRadius="6">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Firstname}" FontSize="30" />
+                            <TextBlock Text="{Binding Company}" FontSize="30" />
+                            <TextBlock Text="{Binding Phone}" FontSize="30" />
+                            <TextBlock Text="{Binding City}" FontSize="30" />
+                        </StackPanel>
                     </materialDesign:Card>
-                    
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
