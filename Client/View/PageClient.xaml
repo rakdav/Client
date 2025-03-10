@@ -26,14 +26,16 @@
                     Width="30" />
             </Button>
             <Button Style="{StaticResource MaterialDesignFloatingActionButton}" ToolTip="Удалить" 
-                 Width="50" Height="50" Grid.Row="1">
+                 Width="50" Height="50" Grid.Row="1" Command="{Binding DeleteCommand}" 
+                CommandParameter="{Binding ElementName=ClientList,Path=SelectedItem}">
                 <materialDesign:PackIcon
                     Kind="Delete"
                     Height="30"
                     Width="30" />
+                
             </Button>
         </Grid>
-        <ListBox Grid.Column="0" ItemsSource="{Binding Clients}">
+        <ListBox Grid.Column="0" Name="ClientList" ItemsSource="{Binding Clients}"  SelectedItem="{Binding SelectedClient}" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <materialDesign:Card

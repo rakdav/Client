@@ -22,11 +22,9 @@ namespace ClientProject.View
     /// </summary>
     public partial class PageClient : Page
     {
-        private HttpClient httpClient;
         public PageClient()
         {
             InitializeComponent();
-            httpClient = new HttpClient();
             DataContext = new ClientViewModel();
         }
     }
