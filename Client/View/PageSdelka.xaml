@@ -5,10 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       xmlns:local="clr-namespace:ClientProject.View"
+      xmlns:convert="clr-namespace:ClientProject.Infrastructure.Converters"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PageSdelka">
-
+    <Page.Resources>
+        <convert:ProductIDtoNameConverter x:Key="ProductIdToName" />
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="9*"/>
@@ -48,9 +51,9 @@
                 UniformCornerRadius="6">
                         <StackPanel>
                             <TextBlock Text="{Binding Productid}" FontSize="30" />
-                            <TextBlock Text="{Binding Clientid}" FontSize="30" />
+                            <TextBlock Text="{Binding Path=Clientid,Converter={StaticResource ProductIdToName}}" FontSize="30" />
                             <TextBlock Text="{Binding Data}" FontSize="30" />
-                            <TextBlock Text="{Binding Count}" FontSize="30" />
+                            <TextBlock Text="{Binding StringFormat=Количество {0} шт,Path=Count}" FontSize="30" />
                         </StackPanel>
                     </materialDesign:Card>
                 </DataTemplate>
